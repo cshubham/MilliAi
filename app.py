@@ -46,6 +46,20 @@ st.markdown(
         border-radius: 16px;
     }
 
+    /* Force dark text in questions + replies so it stays readable on pink,
+       even if the visitor's browser/OS is in dark mode. */
+    [data-testid="stChatMessage"],
+    [data-testid="stChatMessage"] * {
+        color: #2b2b2b !important;
+    }
+    /* Keep the input box text dark and readable too. */
+    [data-testid="stChatInput"] textarea {
+        color: #2b2b2b !important;
+    }
+    [data-testid="stChatInput"] textarea::placeholder {
+        color: #9a6b80 !important;
+    }
+
     /* Falling cherry-blossom petals: fall + sway + slow fade in/out */
     .petal {
         position: fixed;
